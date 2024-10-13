@@ -9,9 +9,9 @@ unreliable freelancers and expensive agencies for one flat monthly fee.
 
 We specialise in speed of delivery and excel when working with our clients in an async nature.
 
-*The annual cost of a full-time senior developer now exceeds £65,000, that's not including benefits!
+*The annual cost of a full-time senior developer now exceeds £65,000, that's not including benefits!*
 
-You may not always have enough work to keep them busy and you can't easily stop paying them, not only is Devcinch
+*You may not always have enough work to keep them busy and you can't easily stop paying them, not only is Devcinch
 cheaper over a 12 month period but you can cancel at any time!*
 
 #+INCLUDE: "stripe.org"
