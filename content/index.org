@@ -14,4 +14,14 @@ We specialise in speed of delivery and excel when working with our clients in an
 *You may not always have enough work to keep them busy and you can't easily stop paying them, not only is Devcinch
 cheaper over a 12 month period but you can cancel at any time!*
 
+#+BEGIN_QUOTE
+We used Devcinch to bring some additional resource into our existing engineering team and have
+seen value in their offerings from the beginning.
+
+It was easy to get started and their detailed knowledge on backend systems has been invaluable.
+
+I would thoroughly recommend their services.
+*James Parmley* /Director of Engineering/
+#+END_QUOTE
+
 #+INCLUDE: "stripe.org"
