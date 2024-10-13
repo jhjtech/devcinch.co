@@ -4,4 +4,4 @@
 
 You will shortly receive a welcome email with instructions for
 creating your first request! In the mean time, if you have any questions,
-please [[mailto:enquiries@jhj.ltd][contact us]].
+please [[mailto:enquiries@jhj.ltd][contact us]]. and check out the [[file:index.org::*FAQ][FAQ]] 

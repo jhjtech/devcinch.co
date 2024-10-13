@@ -25,3 +25,69 @@ I would thoroughly recommend their services.
 #+END_QUOTE
 
 #+INCLUDE: "stripe.org"
+
+** FAQ
+
+1) Why wouldn't I just hire a senior developer?
+
+   Good question! The annual cost of a full-time senior developer now exceeds £65,000, that's not including benefits! You may not always have enough work to keep them busy.
+
+   With our monthly plans, you can pause and resume your subscription as often as you need, to make sure you are only charged when you have work available.
+
+2) How do I request development?
+
+   We offer a lot of flexibility. Some common ways clients request development work is directly via Trello, or with links to the clients existing ticking management system. 
+
+3) Is there a limit to the work I can request?
+
+   You can request as much work as you like but there can only be one task currently in progress.
+
+4) How fast is the work done?
+
+   Like most software development tasks, the length is quite varied. Typically we do small-medium sized tasks in 1-3 days, more complex development takes longer.
+
+5) What if I only have one development task?
+
+   That's fine. When the task is finished you can pause your subscription and keep the remainder of it for when you have additional tasks.
+
+6) What does it mean to pause my subscription?
+
+   Pausing your subscription is useful when you don't have enough development tasks to take up a whole month.
+
+Billing cycles are based on a 31 day period. As an example, if you sign up and use the service for 11 days, and then decide to pause your subscription you will have 20 days left to use at another time.
+
+7) What about holidays and sickness?
+
+   During periods of sickness or holidays your subscription will be paused so that you don't lose any available time.
+
+8) What technology do you use?
+
+   We have experience with a range of technology, including .NET, Java, Kotlin, Clojure, JavaScript, and many modern development platforms. We can get up to speed quickly with your development stack. 
+
+9) What about on-boarding?
+
+   We appreciate the on-boarding process to bring a new developer up to speed can be significant, with this in mind, we allow a 3 day free trial to begin the process.
+
+10) Who are the developers?
+
+    Our developers are lead by [[https://https://www.jhj.ltd/about.html][Mark]]. You will likely get to work directly with him, however, we have a network of trusted developers to call upon if needed
+
+11) How do you maintain quality?
+
+We limit the number of subscriptions available so that concurrent users never go above a threshold that allows us to maintain a high level of service.
+
+12) Will I as be in direct touch with the developer or is there a project manager involved?
+
+    Devcinch provides direct access to the developer.
+
+13) How can I have daily contact with the developer?
+
+    We understand that although email works great with some clients, Slack and other messaging services work better for others. We are happy to be flexible but synchronous meeting and calls generally won't work well with our process.
+
+14) Where are your developers based?
+
+    We are based in the UK
+
+15) What kind of development work is a good fit?
+
+    Well understood, packaged, and isolated work is an excellent fit. Things like performance tuning, code review, security concerns, and other well defined cross cutting concepts can also work well. 
