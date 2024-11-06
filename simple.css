@@ -1,6 +1,5 @@
 /* Global variables. */
-:root,
-::backdrop {
+:root {
   /* Set sans-serif & mono fonts */
   --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
     "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
@@ -14,7 +13,7 @@
   --text: #212121;
   --text-light: #585858;
   --border: #898EA4;
-  --accent: #0d47a1;
+  --accent: #54C4A9;
   --accent-hover: #1266e2;
   --accent-text: var(--bg);
   --code: #d81b60;
@@ -25,8 +24,7 @@
 
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
-  :root,
-  ::backdrop {
+  :root {
     color-scheme: dark;
     --bg: #212121;
     --accent-bg: #2b2b2b;
@@ -195,8 +193,7 @@ button,
 a.button, /* extra specificity to override a */
 input[type="submit"],
 input[type="reset"],
-input[type="button"],
-label[type="button"] {
+input[type="button"] {
   border: 1px solid var(--accent);
   background-color: var(--accent);
   color: var(--accent-text);
@@ -231,8 +228,7 @@ button:enabled:hover,
 .button:not([aria-disabled="true"]):hover,
 input[type="submit"]:enabled:hover,
 input[type="reset"]:enabled:hover,
-input[type="button"]:enabled:hover,
-label[type="button"]:hover {
+input[type="button"]:enabled:hover {
   background-color: var(--accent-hover);
   border-color: var(--accent-hover);
   cursor: pointer;
@@ -671,6 +667,7 @@ progress:indeterminate::-moz-progress-bar {
 }
 
 dialog {
+  background-color: var(--bg);
   max-width: 40rem;
   margin: auto;
 }
@@ -711,16 +708,9 @@ sub {
   margin: 2rem 0;
 }
 
-#content {
-    margin-top: 30px;
+header > h1 {
     padding-top: 60px;
-    background-image: url('devcinch.webp');
+    background-image: url(devcinch.webp);
     background-repeat: no-repeat;
-}
-
-#postamble {
-    text-align: center;
-    margin: 8px;
-    font-style: italic;
-    font-size: 10pt;
+    background-position-x: center;
 }

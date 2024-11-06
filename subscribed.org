@@ -1,0 +1,7 @@
+#+TITLE: Devcinch: Software Development as a Service
+
+* Thank you for subscribing!
+
+  You will shortly receive a welcome email with instructions for creating your first request! 
+
+  In the mean time, if you have any questions, please [[mailto:enquiries@jhj.ltd][contact us]].
