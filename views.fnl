@@ -109,7 +109,7 @@
      "We limit the number of subscriptions available so that concurrent users never go above a threshold that allows us to maintain a high level of service.")
    
    (qna
-     "Will I as be in direct touch with the developer or is there a project manager involved?"
+     "Will I be in direct touch with the developer or is there a project manager involved?"
      "Devcinch provides direct access to the developer.")
    
    (qna
