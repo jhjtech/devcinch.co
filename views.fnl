@@ -87,7 +87,7 @@
    
    (qna
      "What about holidays and sickness?"
-     "During periods of sickness or holidays your subscription will be paused so that you don't lose any available time.")
+     "During periods of sickness or holidays you can work with another developer or your subscription can be paused so that you don't lose any available time.")
    
    (qna
      "What technology do you use?"
