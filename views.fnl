@@ -1,6 +1,5 @@
 (local style (require :style))
 (local html (require :html))
-(local s3 (require :s3))
 
 (local mailchimp
   "<div id=\"mc_embed_shell\">
