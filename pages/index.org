@@ -1,0 +1,53 @@
+** Welcome
+
+Boost efficiency, drive growth, and enhance customer experiences!
+
+We can transform your business with innovative IT solutions.
+
+We provide bespoke software development and consulting services with a focus on delivery while
+taking a pragmatic approach and striving for simple maintainable, and cost effective solutions.
+
+#+BEGIN_QUOTE
+We've worked with JHJ a number of times over the past five years. They have contributed features and bugfixes
+to our Clojure and Kotlin Spring Boot codebases.
+
+They have always been quick to pick up the context of our codebases, flexible, and have got
+started quickly.
+
+*Joe Wass* /Head of Software Development, Crossref/
+#+END_QUOTE
+
+-----
+
+** Our Approach
+:PROPERTIES:
+:CUSTOM_ID: approach
+:END:
+
+Client focused, with a love for pragmatic technology.
+
+*** Innovative Technology
+:PROPERTIES:
+:CUSTOM_ID: tech
+:END:
+
+We stay up-to-date with the latest technology trends and offer innovative solutions that help you stay ahead
+of the competition.
+
+*** Industry Expertise
+:PROPERTIES:
+:CUSTOM_ID: expertise
+:END:
+
+We specialize in serving specific industries, such as healthcare, finance, or manufacturing,
+and offer tailored solutions that meet your unique needs.
+
+*** Scalability
+:PROPERTIES:
+:CUSTOM_ID: scalability
+:END:
+
+We provide  solutions that are scalable and can grow with your business, ensuring that you
+get the most value out of your investment.
+
+-----

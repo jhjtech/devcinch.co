@@ -1,0 +1,57 @@
+#+INCLUDE: "common.org"
+** Clojure Consultancy  
+   {{{rightimg(../../code.jpg)}}}
+
+   We provide deep Clojure expertise with extensive knowledge of its ecosystem. Whether you need technical support, strategic guidance, or additional resources to enhance your Clojure project, we're here to help.  
+
+   Clojure is more than just a language for us-it's our "superpower" for building robust, high-quality systems efficiently and effectively. Our experience spans many "real-time" Clojure-based distributed systems across the full stack, delivering results that our clients can rely on.  
+
+   #+BEGIN_QUOTE  
+   These guys live and breathe Clojure. Their expertise is second to none, and they combine it with a can-do attitude and approachable manner.  
+
+   *Ben Halton* - /Director @ Algorithmica/  
+   #+END_QUOTE  
+
+   Partner with us to unlock the full potential of Clojure for your business needs.  
+
+------
+
+** Technical Leadership  
+
+   {{{rightimg(../../leadership.jpg)}}}
+
+   With a broad range of experience across industries and technologies, we are uniquely positioned to provide technical leadership and strategic direction for your projects.  
+
+   We've taken the lead on numerous client projects, skillfully balancing idealism with pragmatism to deliver the best results. Our "hands-on" approach ensures we stay deeply involved in the details, allowing us to make informed decisions that drive success.  
+
+   Leadership is about more than just technical knowledge, it's about empathy, and a deep desire to understand the problems our clients face.
+
+   #+BEGIN_QUOTE  
+   JHJ joined us at a crucial time for our project, providing leadership and expertise when it was most needed.  
+
+   They quickly took control and created a level of stability that gave us all confidence to move forward.  
+
+   *James* - /Founder @ Keyframe Sports/  
+   #+END_QUOTE  
+
+   Let us bring stability and direction to your next big initiative.  
+
+-----
+
+** MVP and Rapid Prototyping  
+
+   {{{rightimg(../../prototype.jpg)}}}
+
+   Need to bring your idea to life quickly? We specialize in building MVPs using our proven tech stack, enabling you to bring early versions of your product to market as fast as possible.  
+
+   Our approach is built on the principle of "speed without compromise." Unlike many "no-code" MVP builders, our method ensures scalability from the very beginning. This allows you to gather feedback, iterate rapidly, and seamlessly grow your product as your business expands.  
+
+   #+BEGIN_QUOTE  
+   We've been so excited by how quickly Mark and his team have been able to iterate on our product.  
+
+   To see it come to life from an idea has been fantastic.  
+
+   *Stephen* - /Director @ Pelly/  
+   #+END_QUOTE  
+
+   Let's transform your vision into a working product that's built to grow with you.  

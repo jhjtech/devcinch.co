@@ -1,0 +1,7 @@
+@@html:<span class="date">@@
+Jan *25*
+@@html:</span>@@
+
+** Embracing serverless for cost efficiency! 
+
+Contrary to its name, serverless computing does involve servers, but the key differentiator lies in the abstraction of server management from the developer's point of view.

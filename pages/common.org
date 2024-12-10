@@ -1,0 +1,4 @@
+#+MACRO: leftimg @@html:<img src="$1" style="border-radius:10px;margin-bottom:40px;float:left;width:350px;" />@@
+#+MACRO: rightimg @@html:<img src="$1" style="border-radius:10px;margin-bottom:40px;float:right;width:350px;" />@@
+
+

@@ -1,0 +1,77 @@
+#+INCLUDE: "common.org"
+** Tailored Solutions for Your Unique Needs
+
+
+   {{{rightimg(../../tailored.jpg)}}}
+
+   We know that no two businesses are alike. That's why we take the time to understand your unique challenges, priorities, and goals. Our collaborative approach ensures that the solutions we build are custom-tailored to meet your exact needs-helping your business thrive in a competitive world.
+
+   #+BEGIN_QUOTE
+   Saved our business huge sums of money by replacing a legacy thick client application with a modern web-based solution, removing the need for large amounts of private network infrastructure.
+
+   Understanding the problem and coming up with great solutions is what these folks do. The team is approachable and fantastic at communicating with all stakeholders, and their technical expertise is second to none.
+
+   *Marcus Westgage* - /Product Manager @ BAGS/
+   #+END_QUOTE
+
+   Whether you're looking to streamline operations, cut costs, or prepare for growth, we'll help you make it happen.
+
+   -----
+
+** Experienced Professionals You Can Count On
+
+   {{{rightimg(../../professionals.jpg)}}}
+
+   When you work with us, you're partnering with a team of experts who have successfully delivered IT projects for businesses across a range of industries. We bring not just technical know-how but also a practical, problem-solving mindset that ensures results.
+
+   #+BEGIN_QUOTE
+   Getting to the heart of the problem is a specialist skill-and one this team has in abundance. Their focus on pragmatic solutions, while keeping on top of the latest technology, has driven us forward.
+
+   From UI development to database optimization, Devcinch has made a massive contribution across the technology stack.
+
+   *Ben Halton* - /Director @ Algorithmica/
+   #+END_QUOTE
+
+   We'll help you solve your toughest challenges, so you can focus on growing your business.
+
+   -----
+
+** Empowering You with Cutting-Edge Technologies
+
+
+   {{{rightimg(../../cuttingedge.jpg)}}}
+
+   The tech world moves fast, and staying ahead can feel like a full-time job. We're here to ensure your business keeps pace with the latest advancements, providing solutions that are not only innovative but also practical and future-ready.
+
+   #+BEGIN_QUOTE
+   We've worked with JHJ several times over the past five years. They've contributed features and bug fixes to our Clojure and Kotlin Spring Boot codebases.
+
+   They are quick to pick up the context of our codebases, flexible, and able to get started quickly.
+
+   *Joe Wass* - /Head of Software Development @ Crossref/
+   #+END_QUOTE
+
+   Whether you're modernizing a legacy system, launching an MVP, or optimizing your cloud deployment, we'll equip you with the tools and technologies you need to succeed.
+
+   -----
+
+
+** Fair and Flexible Pricing That Fits Your Budget  
+
+   {{{rightimg(../../budget.jpg)}}}
+
+   We understand that small businesses need to make every dollar count. That's why we offer a range of pricing options designed to provide maximum value without breaking the bank. Whether you're launching a new idea, modernizing your systems, or scaling up, we have a plan to suit your needs.  
+
+   - **Hourly Rate:** Perfect for short-term tasks, bug fixes, or exploratory work. You only pay for the time we spend on your project, ensuring transparency and control over your costs.  
+   - **Project-Based Fee:** Ideal for defined deliverables like MVPs or specific feature builds. You'll get a clear, upfront cost so there are no surprises along the way.  
+   - **Monthly Subscription:** For ongoing development and support, our cancel-anytime subscription gives you consistent access to our team without long-term commitments.  
+
+   #+BEGIN_QUOTE  
+   Their flexible pricing options were a game changer for us. We started with an hourly contract to fix some pressing issues and later transitioned to a monthly subscription for a complete rebuild of our platform.  
+
+   The team was transparent, fair, and worked within our budget constraints without compromising quality.  
+
+   *James* - /Founder @ Keyframe Sports/  
+   #+END_QUOTE  
+
+   With our fair and flexible pricing, you get high-quality development services at a scale that works for your business. Let's build something amazing together-without the stress of oversized invoices.  

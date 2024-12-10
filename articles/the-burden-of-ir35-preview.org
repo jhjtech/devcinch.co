@@ -1,0 +1,7 @@
+@@html:<span class="date">@@
+Jun *27*
+@@html:</span>@@
+
+*** The Burden of IR35 on Small Businesses Trying to Hire Software Contractors
+
+The implementation of IR35, a tax legislation introduced by the UK government to combat tax avoidance, has had a profound impact on the hiring landscape, particularly for small businesses looking to hire software contractors.

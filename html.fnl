@@ -1,5 +1,6 @@
 (local self-closing
   [:link
+   :br
    :meta
    :input])
 

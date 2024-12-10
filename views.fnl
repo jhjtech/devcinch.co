@@ -1,192 +1,298 @@
 (local style (require :style))
 (local html (require :html))
-
-(local mailchimp
-  "<div id=\"mc_embed_shell\">
-  <link href=\"//cdn-images.mailchimp.com/embedcode/classic-061523.css\" rel=\"stylesheet\" type=\"text/css\">
-  <style type=\"text/css\">
-  #mc_embed_signup background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
-  /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-  We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-  </style>
-  <div id=\"mc_embed_signup\">
-  <form action=\"https://ltd.us10.list-manage.com/subscribe/post?u=defbb29af77e62d14937e5328&amp;id=58d8f9c678&amp;f_id=0067f7e3f0\" method=\"post\" id=\"mc-embedded-subscribe-form\" name=\"mc-embedded-subscribe-form\" class=\"validate\" target=\"_blank\">
-  <div id=\"mc_embed_signup_scroll\"><h2>Get your savings report! </h2>
-  <div class=\"indicates-required\"><span class=\"asterisk\">*</span> indicates required</div>
-  <div class=\"mc-field-group\"><label for=\"mce-EMAIL\">Email Address <span class=\"asterisk\">*</span></label><input type=\"email\" name=\"EMAIL\" class=\"required email\" id=\"mce-EMAIL\" required=\"\" value=\"\"></div>
-  <div id=\"mce-responses\" class=\"clear foot\">
-  <div class=\"response\" id=\"mce-error-response\" style=\"display: none;\"></div>
-  <div class=\"response\" id=\"mce-success-response\" style=\"display: none;\"></div>
-  </div>
-  <div aria-hidden=\"true\" style=\"position: absolute; left: -5000px;\">
-  /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-  <input type=\"text\" name=\"b_defbb29af77e62d14937e5328_58d8f9c678\" tabindex=\"-1\" value=\"\">
-  </div>
-  <div class=\"optionalParent\">
-  <div class=\"clear foot\">
-  <input type=\"submit\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\" value=\"Subscribe\">
-  <p style=\"margin: 0px auto;\"><a href=\"http://eepurl.com/i3Vu0k\" title=\"Mailchimp - email marketing made easy and fun\"><span style=\"display: inline-block; background-color: transparent; border-radius: 4px;\"><img class=\"refferal_badge\" src=\"https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg\" alt=\"Intuit Mailchimp\" style=\"width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;\"></span></a></p>
-  </div>
-  </div>
-  </div>
-  </form>
-  </div>
-  <script type=\"text/javascript\" src=\"//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js\"></script><script type=\"text/javascript\"> function($)  window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
-")
+(local files (require :files))
+(local snippets (require :snippets))
 
 (local doctype "<!DOCTYPE html>")
 
-(fn master [body]
-  [:html {:lang "en"}
-   [:head {} style
-    [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0"}]
-    [:meta {:name "description" :content "Devcinch is a software development subscription service, giving you flexible access to expert software developers!"}]
-    [:meta {:name "author" :content "devcinch"}]
-    [:meta {:name "keywords" :content "software dev, developer, development as a service, software consultant, cheap software dev"}]
-    [:link {:rel "canonical" :href "https://devcinch.co"}]
-    [:link {:rel "icon" :href "/favicon.png"}]
-    [:title {} "Devcinch: Software Development as a service to scale your business!"]]
-   body])
+(fn tchelper [first rest] (.. (first:upper) (rest:upper)))
+(fn caps [s] (string.gsub s "(%a)([%w_']*)" tchelper))
 
 (local footer 
-  [:footer {}
-   "Copyright JHJ Technology Limited | Company Number 12418911"])
+  [:section {:id :footer}
+   [:div {:class :container}
+    [:div {:class :row}
+     [:div {:class "col-8 col-12-medium"}
+      [:section {}
+       [:header {}
+        [:h2 {}
+         "Recent Articles"]] 
+       (snippets.article-links 10)]]
+     [:div {:class "col-4 col-12-medium"}
+      [:section {}
+       [:header {}
+        [:h2 {} "Get in touch!"]]
+       [:ul {:class :contact}
+        [:li {}
+         [:h3 {} "Address"]
+         [:p {} "Tividale"]
+         [:p {} "Oldbury"]
+         [:p {} "West Midlands"]
+         [:p {} "United Kingdom"]]
+        [:li {}
+         [:h3 {} "Phone"]
+         [:p {} "+44 7894 054 759"]]
+        [:li {}
+         [:h3 {} "Mail"]
+         [:p {} [:a {:href "mailto:enquiries@jhj.ltd"} "enquiries@jhj.ltd"]]]]]]
+     [:div {:class :col-12}
+      [:div {:id :copyright}
+       [:ul {:class :links}
+        [:li {} "&copy; JHJ Technology Limited" ]
+        [:li {} "Company Number 12418911" ]
+        [:li {} "Design: " [:a {:href "http://html5up.net"} "HTML5 UP"]]]]]
+     ]]])
 
+(fn master [intro body link title include-banner]
+  [:html {:lang "en"}
+   [:head {} style
+    [:link {:rel :stylesheet :href "/fontawesome-all.min.css"}]
+    [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0"}]
+    [:meta {:name "description" :content "Clojure software development and consultancy, rapid mvp, prototyping, and devops."}]
+    [:meta {:name "keywords"
+            :content (..
+                       "software development, clojure consultancy, software development as a service, save money on software dev, software engineering, software dev west midlands, software engineer west midlands, software dev birmingham, software engineer birmingham, software development as a service, cheap software dev, cto co founder "
+                       (if title (.. ", " title) ""))}]
+    [:link {:rel "icon" :href "/icon.png"}]
+    [:link {:rel "canocical" :href link}]
+    [:title {} (.. "Devcinch by JHJ Technology Ltd: " (or title "Easy access to high quality software development"))]]
+   [:body {:class "homepage is-preload"} 
+    [:div {:id :page-wrapper}
+     [:section {:id :header}
+      [:a {:href "/"} [:img {:style "margin-top:40px;" :src "/devcinch.webp"}]]
+      [:nav {:id :nav} 
+       [:ul {} 
+        [:li {:class (if (= link "/") "current" "")} [:a {:href "/"} "Home"]]
+        [:li {:class (if (string.match link "%/clients") "current" "")} [:a {:href "/clients"} "Clients"]]
+        [:li {:class (if (string.match link "%/faq") "current" "")} [:a {:href "/pages/faq"} "FAQ"]]
+        [:li {:class (if (string.match link "%/articles") "current" "")} [:a {:href "/articles"} "Articles"]]]]
 
-(fn qna [question answer]
-  [:details {} 
-   [:summary {} [:b {} question]]
-   [:p {} answer]])
+      (when include-banner 
+        [:section {:id :banner}
+         [:header {}
+          [:h2 {:style "text-decoration:italic;"} "Devcinch"]
+          [:p {} "Software Development as a Service - Turning Your Big Ideas into Robust Software Solutions!"]]])
 
-(fn faq []
-  [:div {}
-   (qna 
-     "Why wouldn't I just hire a senior developer?"
-     "Good question! The annual cost of a full-time senior developer now exceeds £65,000, that's not including benefits! You may not always have enough work to keep them busy.
-      With our monthly plans, you can pause and resume your subscription as often as you need, to make sure you are only charged when you have work available.
-     ")
-   (qna
-     "How do I request development?"
-     "We offer a lot of flexibility. Some common ways clients request development work is directly via Trello, or with links to the clients existing ticking management system.")
-   (qna
-     "Is there a limit to the work I can request?"
-     "You can request as much work as you like but there can only be one task currently in progress.")
-   (qna
-     "How fast is the work done?"
-     "Like most software development tasks, the length is quite varied. Typically we do small-medium sized tasks in 1-3 days, more complex development takes longer.")
-   
-   (qna
-     "What if I only have one development task?"
-     "That's fine. When the task is finished you can pause your subscription and keep the remainder of it for when you have additional tasks.")
-   
-   (qna
-     "What does it mean to pause my subscription?"
-     "Pausing your subscription is useful when you don't have enough development tasks to take up a whole month.
-     Billing cycles are based on a 31 day period. As an example, if you sign up and use the service for 11 days, and then decide to pause your subscription you will have 20 days left to use at another time.")
-   
-   (qna
-     "What about holidays and sickness?"
-     "During periods of sickness or holidays you can work with another developer or your subscription can be paused so that you don't lose any available time.")
-   
-   (qna
-     "What technology do you use?"
-     "We have experience with a range of technology, including .NET, Java, Kotlin, Clojure, JavaScript, and many modern development platforms. We can get up to speed quickly with your development stack.")
-   
-   (qna
-     "What about on-boarding?"
-     "We appreciate the on-boarding process to bring a new developer up to speed can be significant, with this in mind, we allow a 3 day free trial to begin the process.")
-   
-   (qna
-     "Who are the developers?"
-     [:div {}
-      "Our developers are lead by "
-      [:a {:href "https://www.jhj.ltd/about.html"} "Mark"]
-      " .You will likely get to work directly with him, however, we have a network of trusted developers to call upon if needed"])
-   
-   (qna
-     "How do you maintain quality?"
-     "We limit the number of subscriptions available so that concurrent users never go above a threshold that allows us to maintain a high level of service.")
-   
-   (qna
-     "Will I be in direct touch with the developer?"
-     "Devcinch provides direct access to the developer.")
-   
-   (qna
-     "How can I have daily contact with the developer?"
-     "We understand that although email works great with some clients, Slack and other messaging services work better for others. We are happy to be flexible but synchronous meeting and calls generally won't work well with our process.")
-   
-   (qna
-     "Where are your developers based?"
-     "We are based in the UK")
-   
-   (qna
-     "What kind of development work is a good fit?"
-     "Well understood, packaged, and isolated work is an excellent fit. Things like performance tuning, code review, security concerns, and other well defined cross cutting concepts can also work well. ")])
+      intro]
+     body
+     footer]
+    [:script {:src "/js/jquery.min.js"}]
+    [:script {:src "/js/jquery.dropotron.min.js"}]
+    [:script {:src "/js/browser.min.js"}]
+    [:script {:src "/js/breakpoints.min.js"}]
+    [:script {:src "/js/util.js"}]
+    [:script {:src "/js/main.js"}]]])
 
+(fn articles []
+  (.. doctype
+      (html 
+        (master
+          [:div {}]
+          [:section {:id :main}
+           [:div {:class :container}
+            [:div {:class :row}
+             [:div {:class :col-12}
+              [:section {}
+               [:header {:class :major}
+                [:h2 {} "Our Articles"]]
+               [:section {:class :box} (snippets.article-previews 1000)]]]]]]
+          "/articles"
+          "Our latest articles"
+          false))))
+
+(fn article [a]
+  (let [title (caps (-> a
+                        (string.gsub "%/articles%/" "")
+                        (string.gsub "%-" " ")))]
+    (.. doctype
+        (html 
+          (master
+            [:div {}]
+            [:section {:id :main}
+             [:div {:class :container}
+              [:div {:class :row}
+               [:div {:class :col-12}
+                [:section {}
+                 [:header {:class :major}
+                  [:h2 {} title ]]
+                 [:section {:class :box} (files.read (.. "./html" a ".html"))]
+                 [:section {:class :box}
+                  [:div {:class :col-12}
+                   [:section {}
+                    [:header {}
+                     [:h2 {} "Lets Get Started!"]]
+                    [:p {} "Enter your email address in the form below and let us start bringing your big ideas to life. We won't use your email address for anything else."]]
+                   snippets.mailchimp]]]]]]]
+            a
+            title
+            false)))))
+
+(fn page [a]
+  (let [title (caps (-> a
+                        (string.gsub "%/pages%/clients%/" "")
+                        (string.gsub "%/pages%/" "")
+                        (string.gsub "%-" " ")))]
+    (.. doctype
+        (html 
+          (master
+            [:div {}]
+            [:section {:id :main}
+             [:div {:class :container}
+              [:div {:class :row}
+               [:div {:class :col-12}
+                [:section {}
+                 [:header {:class :major}
+                  [:h2 {} title ]]
+                 [:section {:class :box} (files.read (.. "./html" a ".html"))]
+                 [:section {:class :box}
+                  [:div {:class :col-12}
+                   [:section {}
+                    [:header {}
+                     [:h2 {} "Lets Get Started!"]]
+                    [:p {} "Enter your email address in the form below and let us start bringing your big ideas to life. We won't use your email address for anything else."]]
+                   snippets.mailchimp]]]]]]]
+            a
+            title
+            false)))))
+
+(fn clients []
+  (.. doctype
+      (html 
+        (master
+          [:section {:id :intro :class :container}
+           [:div {:class :row}
+            [:div {:class "col-4 col-12-medium"}
+             [:section {:class :first}
+              [:i {:class "icon solid featured fa-cog"}]
+              [:header {}
+               [:h2 {} "Clojure Consultancy"]
+               [:p {} "We have a wealth of experience when it comes to Clojure and we believe Clojure sets us apart and is our \"superpower\" for delivering robust high quality systems quickly.
+                We have worked on many \"real time\" Clojure based distributed systems across the full stack."]]]]
+
+            [:div {:class "col-4 col-12-medium"}
+             [:section {:class :middle}
+              [:i {:class "icon solid featured alt fa-users"}]
+              [:header {}
+               [:h2 {} "Technical Leadership"]
+               [:p {} "We stay up-to-date with the latest technology trends and offer innovative solutions that help you stay ahead of the competition."]]]]
+
+            [:div {:class "col-4 col-12-medium"}
+             [:section {:class :first}
+              [:i {:class "icon solid featured fa-hourglass-start"}]
+              [:header {}
+               [:h2 {} "Bootstrapping"]
+               [:p {} "Our tech stack allows for rapid iteration and short lead times, allowing you to realise and bring your ideas to market quickly."]]]]]]
+          [:section {:id :main}
+           [:div {:class :container}
+            [:div {:class :row}
+             [:div {:class :col-12}
+              [:section {}
+               [:header {:class :major}
+                [:h2 {} "Our Clients"]]
+               (snippets.render-clients)]]]]]
+          "/clients"
+          "Our Clients"
+          false))))
 
 (fn index []
   (.. doctype
       (html 
         (master
-          [:body {}
-           [:header {}
-            [:img {:src "/devcinch.webp"}]]
-           [:main {}
-            [:h1 {} "Software Development as a Service to scale your business!"]
-            [:h3 {} "Our unique take on Software Development, is a cinch!"]
-            [:p {} "
-             Our subscription product Devcinch allows you access to a software developer, 
-             replacing unreliable freelancers and expensive agencies for one flat monthly fee.
-             "]
-            [:p {} "
-             We specialise in speed of delivery and excel when working with our clients in an async nature.
-             "]
-            [:p {} "
-             The annual cost of a full-time senior developer now exceeds £65,000, that's not including benefits! 
-             "]
-            [:p {} "
-             You may not always have enough work to keep them busy and you can't easily stop paying them, 
-             not only is Devcinch cheaper over a 12 month period but you can cancel at any time! 
-             "]
-            [:blockquote {}
-             [:p {}
-              "We used Devcinch to bring some additional resource into our existing engineering team and 
-              have seen value in their offerings from the beginning."]
-             [:p {}
-              "It was easy to get started and their detailed knowledge on backend systems has been invaluable."]
-             [:p {}
-              [:b {} "James Parmley"]]
-             [:p {} "Director of Engineering"]]
-            [:h3 {}
-             "Start for free now!"]
-            [:script {:async "true" :src "https://js.stripe.com/v3/pricing-table.js"}]
-            [:stripe-pricing-table {:pricing-table-id "prctbl_1PPVYMByfLhKEshpQlq3dVGx"
-                                     :publishable-key "pk_live_51NJdTqByfLhKEshpzNjQmV9nERvHTE9zzS632pwzxWBENy463c7UijEkcos5qGOhD6p26M2MvuK7429tINybwuRU006vWBC0ou"}]
-            [:h3 {}
-             "FAQ"]
-            (faq)]
-           footer]))))
+          [:section {:id :intro :class :container}
+           [:div {:class :row}
+            [:div {:class "col-4 col-12-medium"}
+             [:section {:class :first}
+              [:i {:class "icon solid featured fa-seedling"}]
+              [:header {}
+               [:h2 {} "Devcinch Basic"]
+               [:p {} "Supercharge your software development with our Basic plan! Our basic plan can get you started with a developer right away!"]
+               [:h3 {} "£2,495 per month"]
+               [:ul {:style "margin-top: 10px;"}
+                [:li {:class "feature-list-item"} "Cancel anytime"]
+                [:li {:class "feature-list-item"} "Minimum 4 Day(s) Dev /month"]
+                [:li {:class "feature-list-item"} "Async comms - email/slack etc"]]
+               [:a {:class :button :href "https://checkout.stripe.com/c/pay/cs_live_a1MM2aiknDz5FfERthviRtovStoQnrm60B4YCqnHip5jTkZZd5XciqEHng#fidkdWxOYHwnPyd1blppbHNgWjA0S09hUXRHfGNJbU5Adm11f0tvVGhTPGtAV3NNUUA8f39WMzY3dXJ%2FfVJHQEt8MTM2ZjJQbG9AbmZqdjB0QkptQTN1NzNIN0hzcE4yMTc8cUxLfGdycFdQNTUzc1JHRjVqcCcpJ3ZwZ3Zmd2x1cWxqa1BrbHRwYGtgdnZAa2RnaWBhJz9jZGl2YHgl"}
+                "Subscribe"]]]]
 
-(fn subscribed []
-  (.. doctype
-      (html 
-        (master
-          [:body {}
-           [:header {}
-            [:img {:src "/devcinch.webp"}]]
-           [:main {}
-            [:h1 {} "Welcome to Devcinch!"]
-            [:h3 {} "Thank you for subscribing."]
-            [:p {}
-             "You will shortly receive a welcome email with instructions for creating your first request!"
-             "In the mean time, if you have any questions, please "
-             [:a {:href "mailto:enquiries@jhj.ltd"} "contact us "]
-             "and do check out the FAQ below:"]
-            [:h3 {} "FAQ"]
-            (faq)]
-           footer]))))
+            [:div {:class "col-4 col-12-medium"}
+             [:section {:class :middle}
+              [:i {:class "icon solid featured alt fa-leaf"}]
+              [:header {}
+               [:h2 {} "Devcinch Standard"]
+               [:p {} "Supercharge your software development with our Standard plan! Our most popular Standard plan is like having your own senior engineer!"]
+               [:h3 {} "£5,499 per month"]
+               [:ul {:style "margin-top: 10px;"}
+                [:li {:class "feature-list-item"} "All from basic plan"]
+                [:li {:class "feature-list-item"} "Minimum 9 Day(s) Dev /month"]
+                [:li {:class "feature-list-item"} "Bring your own tools, JIRA etc"]]
+               [:a {:class :button :href "https://checkout.stripe.com/c/pay/cs_live_b1sgTc0BbfN32lVA6wvDk1Ax2IVZ0cwtDrSfHfeb9jDp9ELgScT5bNc7zu#fidkdWxOYHwnPyd1blppbHNgWjA0S09hUXRHfGNJbU5Adm11f0tvVGhTPGtAV3NNUUA8f39WMzY3dXJ%2FfVJHQEt8MTM2ZjJQbG9AbmZqdjB0QkptQTN1NzNIN0hzcE4yMTc8cUxLfGdycFdQNTUzc1JHRjVqcCcpJ3ZwZ3Zmd2x1cWxqa1BrbHRwYGtgdnZAa2RnaWBhJz9jZGl2YHgl"}
+                "Start Trial"]]]]
+
+            [:div {:class "col-4 col-12-medium"}
+             [:section {:class :first}
+              [:i {:class "icon solid featured fa-tree"}]
+              [:header {}
+               [:h2 {} "Devcinch Plus"]
+               [:p {} "Supercharge your software development with our Plus plan! Our Plus plan integrates a senior engineer into your team and workflow!"]
+               [:h3 {} "£11,995 per month"]
+               [:ul {:style "margin-top: 10px;"}
+                [:li {:class "feature-list-item"} "All from standard plan"]
+                [:li {:class "feature-list-item"} "Minimum 20 Day(s) Dev /month"]
+                [:li {:class "feature-list-item"} "Fully integrated"]]
+               [:a {:class :button :href "https://checkout.stripe.com/c/pay/cs_live_b1joWftlENZt1O2ogB57LiKJfYW9e1NYCGO0Zr3se2s7cF6jTO8DO4nooI#fidkdWxOYHwnPyd1blppbHNgWjA0S09hUXRHfGNJbU5Adm11f0tvVGhTPGtAV3NNUUA8f39WMzY3dXJ%2FfVJHQEt8MTM2ZjJQbG9AbmZqdjB0QkptQTN1NzNIN0hzcE4yMTc8cUxLfGdycFdQNTUzc1JHRjVqcCcpJ3ZwZ3Zmd2x1cWxqa1BrbHRwYGtgdnZAa2RnaWBhJz9jZGl2YHgl"}
+                "Start Trial"]]]]]]
+          [:section {:id :main}
+           [:div {:class :container}
+            [:div {:class :row :style "margin-bottom:40px;"}
+             [:div {:class :col-12}
+              [:section {:class :box}
+               [:div {:class "center"}
+                [:h3 {} "Our unique take on Software Development, is a cinch!"]
+                [:p {:style "margin-top:20px;"} "Our subscription product Devcinch allows you access to a software developer, replacing unreliable freelancers and expensive agencies for one flat monthly fee."]
+                [:p {:style "margin-top:20px;"} "We specialise in speed of delivery and excel when working with our clients in an async nature."]
+                [:b {:style "margin-top:20px;"} "The annual cost of a full-time senior developer now exceeds £65,000, that's not including benefits!
+
+                 You may not always have enough work to keep them busy and you can't easily stop paying them, not only is Devcinch cheaper over a 12 month period but you can cancel at any time!"]]]]]
+            [:div {:class :row}
+             [:div {:class :col-12}
+              [:section {:class "box large-quote"}
+               [:div {:class :center}
+                [:blockquote 
+                 {:class :major}
+                 "\"Understanding the problem and coming up with great solutions is what these guys do, the team are approachable and fantastic communicators to all stakeholders and their technical expertise is second to none.\""]
+                [:b {:class :major-quote-name}
+                 "Marcus Westgate"]]
+               [:div {:class :center}
+                [:i {:class :major-quote-role}
+                 "Product Manager"]]]]]
+            [:div {:class :row}
+             [:div {:class :col-12}
+              [:section {}
+               [:header {:class :major}
+                [:h2 {} "Our Clients"]]
+               (snippets.render-clients)]]]
+            [:div {:class :row :style "margin-top:40px;"}
+             [:div {:class :col-12}
+              [:section {:class "box large-quote"}
+               [:div {:class :center}
+                [:blockquote 
+                 {:class :major}
+                 "\"We used JHJ to bring some additional resource into our existing engineering team and have seen value in their offerings from the beginning. It was easy to get started and their detailed knowledge on backend systems has been invaluable.\""]
+                [:b {:class :major-quote-name}
+                 "James Parmley"]]
+               [:div {:class :center}
+                [:i {:class :major-quote-role}
+                 "Director of Engineering"]]]]]
+            ]]
+          "/"
+          "Clojure Consultancy and Bespoke Software Development"
+          true))))
+
 
 
 {: master
- : index
- : subscribed }
+ : article
+ : articles
+ : clients
+ : page
+ : index }

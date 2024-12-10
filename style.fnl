@@ -1,1 +1,1 @@
-[:link {:rel :stylesheet :href "/simple.css"}]
+[:link {:rel :stylesheet :href "/main.css"}]

@@ -1,0 +1,38 @@
+BAGS or Bookmakers Afternoon Greyhound Service offers gambling-betting services.
+
+Bookmakers Afternoon Greyhound Services Ltd provides gambling and betting services.
+The Company offers live and virtual greyhound racing, betting and other relevant information. 
+
+BAGS was in desperate need of technology help. They were relying on outdated systems with large support costs,
+infrastructure that was unreliable and difficult to manage, with no capability to innovate and iterate on their product. 
+
+We worked closely with BAGS stakeholders to build a modern, scalable, and secure platform that they could build on
+for the coming decades.  
+
+#+BEGIN_QUOTE
+Saved our business huge sums of money by replacing a legacy thick client application
+with a modern web based solution, removing the need for large amounts of private network infrastructure.
+
+Understanding the problem and coming up with great solutions is what these guys do, the team are
+approachable and fantastic communicators to all stakeholders and their technical expertise is second to none.
+
+*Marcus Westgage* /Product Manager/
+#+END_QUOTE
+
+The fundamentals of this platform are in the many data integrations required, we worked closely with integration partners to facilitate 10+ fully featured data integrations,
+ranging from betting data to governance and compliance.  
+
+With these integrations in place we embarked on a project to surface this data to a number
+of new, purpose built front ends. 
+
+After migrating to their new platform BAGS could decommission many other systems that
+were no longer fit for purpose, this resulted in substantial cost savings.
+
+We continue to work closely with BAGS and since 2019 have been running and supporting all of their production infrastructure and continuing to innovate on their product.  
+
+#+BEGIN_QUOTE
+Working with BAGS has been seamless and our new platform has been well received.
+It is fantastic to be a part of a long term project that has saved BAGS a substantial amount of money.
+
+*Mark Woodhall*  /Director JHJ/
+#+END_QUOTE
