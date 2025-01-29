@@ -54,7 +54,7 @@ clean: stop clean-html clean-lua
 	rm -rf $(OUT)
 
 deploy: clean build
-	-git remote add heroku https://git.heroku.com/jhj.git
+	-git remote add heroku https://git.heroku.com/devcinch.git
 	@git describe --match=NeVeRmAtCh --always --dirty > version.txt
 	@git add .
 	@git commit -m "Deploy"
