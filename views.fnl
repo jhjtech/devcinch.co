@@ -211,7 +211,7 @@
                 [:li {:class "feature-list-item"} "Cancel anytime"]
                 [:li {:class "feature-list-item"} "Minimum 4 Day(s) Dev /month"]
                 [:li {:class "feature-list-item"} "Async comms - email/slack etc"]]
-               [:a {:class :button :href "https://checkout.stripe.com/c/pay/cs_live_a1MM2aiknDz5FfERthviRtovStoQnrm60B4YCqnHip5jTkZZd5XciqEHng#fidkdWxOYHwnPyd1blppbHNgWjA0S09hUXRHfGNJbU5Adm11f0tvVGhTPGtAV3NNUUA8f39WMzY3dXJ%2FfVJHQEt8MTM2ZjJQbG9AbmZqdjB0QkptQTN1NzNIN0hzcE4yMTc8cUxLfGdycFdQNTUzc1JHRjVqcCcpJ3ZwZ3Zmd2x1cWxqa1BrbHRwYGtgdnZAa2RnaWBhJz9jZGl2YHgl"}
+               [:a {:class :button :href "https://buy.stripe.com/fZe6rTbbkf72gJGfZk"}
                 "Subscribe"]]]]
 
             [:div {:class "col-4 col-12-medium"}
@@ -225,7 +225,7 @@
                 [:li {:class "feature-list-item"} "All from basic plan"]
                 [:li {:class "feature-list-item"} "Minimum 9 Day(s) Dev /month"]
                 [:li {:class "feature-list-item"} "Bring your own tools, JIRA etc"]]
-               [:a {:class :button :href "https://checkout.stripe.com/c/pay/cs_live_b1sgTc0BbfN32lVA6wvDk1Ax2IVZ0cwtDrSfHfeb9jDp9ELgScT5bNc7zu#fidkdWxOYHwnPyd1blppbHNgWjA0S09hUXRHfGNJbU5Adm11f0tvVGhTPGtAV3NNUUA8f39WMzY3dXJ%2FfVJHQEt8MTM2ZjJQbG9AbmZqdjB0QkptQTN1NzNIN0hzcE4yMTc8cUxLfGdycFdQNTUzc1JHRjVqcCcpJ3ZwZ3Zmd2x1cWxqa1BrbHRwYGtgdnZAa2RnaWBhJz9jZGl2YHgl"}
+               [:a {:class :button :href "https://buy.stripe.com/3cs5nP2EO3okdxu14r"}
                 "Start Trial"]]]]
 
             [:div {:class "col-4 col-12-medium"}
@@ -239,7 +239,7 @@
                 [:li {:class "feature-list-item"} "All from standard plan"]
                 [:li {:class "feature-list-item"} "Minimum 20 Day(s) Dev /month"]
                 [:li {:class "feature-list-item"} "Fully integrated"]]
-               [:a {:class :button :href "https://checkout.stripe.com/c/pay/cs_live_b1joWftlENZt1O2ogB57LiKJfYW9e1NYCGO0Zr3se2s7cF6jTO8DO4nooI#fidkdWxOYHwnPyd1blppbHNgWjA0S09hUXRHfGNJbU5Adm11f0tvVGhTPGtAV3NNUUA8f39WMzY3dXJ%2FfVJHQEt8MTM2ZjJQbG9AbmZqdjB0QkptQTN1NzNIN0hzcE4yMTc8cUxLfGdycFdQNTUzc1JHRjVqcCcpJ3ZwZ3Zmd2x1cWxqa1BrbHRwYGtgdnZAa2RnaWBhJz9jZGl2YHgl"}
+               [:a {:class :button :href "https://buy.stripe.com/00gg2t7Z8bUQ3WUdRb"}
                 "Start Trial"]]]]]]
           [:section {:id :main}
            [:div {:class :container}
